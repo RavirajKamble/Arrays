@@ -18,7 +18,7 @@ int main()
     {
         arr[i] = arr[i + 1];
     }
-    k = k - 1;
+    k = k - 1; //Changing size of the array
     for (i = 0; i < k; i++)
     {
         cout << arr[i] << " ";
