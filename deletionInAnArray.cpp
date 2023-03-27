@@ -3,26 +3,26 @@
 using namespace std;
 int main()
 {
-    int N;
+    int N, i;
     cin >> N;
     int arr[N];
-    int k, i;
+    int k;
     cin >> k;
     for (i = 0; i < k; i++)
     {
         cin >> arr[i];
     }
-    int x, index;
-    cin >> x >> index;
-    for (i = k - 1; i >= index; i--)
+    int index;
+    cin >> index;
+    for (i = index; i < k; i++)
     {
-        arr[i + 1] = arr[i];
+        arr[i] = arr[i + 1];
     }
-    arr[index] = x;
-    k = k+1; // changing the size of array 
+    k = k - 1;
     for (i = 0; i < k; i++)
     {
         cout << arr[i] << " ";
     }
+
     return 0;
 }
